@@ -1,0 +1,7 @@
+{
+  "name": "github-ribbon#gh-pages",
+  "private": true,
+  "dependencies": {
+    "github-ribbon": "philipp94831/github-ribbon#master"
+  }
+}

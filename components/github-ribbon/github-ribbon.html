@@ -1,0 +1,96 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Element to display GitHub Ribbon 'Fork Me'.
+
+##### Example
+
+    <github-ribbon repository="philipp94831/github-ribbon"></github-ribbon>
+
+@element github-ribbon
+@blurb Element to display GitHub Ribbon 'Fork me'.
+@status alpha
+@homepage http://philipp94831.github.io/github-ribbon/
+-->
+<polymer-element name="github-ribbon" attributes="repository color left">
+
+  <template>
+
+    <link rel="stylesheet" href="github-ribbon.css" />
+    
+    <a href="https://github.com/{{repository}}">
+      <img class="{{left? 'left' : 'right'}}" src="{{types[color][left? 'left' : 'right']}}" alt="Fork me on GitHub" />
+    </a>
+
+  </template>
+
+  <script>
+
+    Polymer('github-ribbon', {
+      /**
+       * The `color` attribute sets the color of the ribbon.
+       * 
+       * @attribute color
+       * @type string
+       * @default 'red'
+       */
+      color: 'red',
+      
+      /**
+       * The `repository` attribute sets the GitHub Repository the ribbon links.
+       * 
+       * @attribute repository
+       * @type string
+       * @default ''
+       */
+      repository: '',
+
+      publish: {
+        /**
+         * The `left` attribute sets the corner, where the ribbon is displayed.
+         * 
+         * @attribute left
+         * @type bool
+         * @default false
+         */
+        left: {
+          value: false,
+          reflect: true
+        }
+
+      },
+
+      created: function() {
+        this.types = {
+          "red": {
+            "left": 'https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png',
+            "right": 'https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png'
+          },
+          "green": {
+            "left": 'https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png',
+            "right": 'https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png'
+          },
+          "darkblue": {
+            "left": 'https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png',
+            "right": 'https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png'
+          },
+          "orange": {
+            "left": 'https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png',
+            "right": 'https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png'
+          },
+          "gray": {
+            "left": 'https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png',
+            "right": 'https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png'
+          },
+          "white": {
+            "left": 'https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png',
+            "right": 'https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png'
+          }
+        }
+      }
+
+    });
+
+  </script>
+
+</polymer-element>

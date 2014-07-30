@@ -1,0 +1,28 @@
+{
+  "name": "github-ribbon",
+  "authors": [
+    "Philipp Schirmer <philipp@schirmer-online.de>"
+  ],
+  "description": "Element to display GitHub Ribbon 'Fork me'.",
+  "keywords": "github-ribbon, polymer, web-components",
+  "main": "github-ribbon.html",
+  "license": "MIT",
+  "homepage": "https://github.com/philipp94831/github-ribbon/",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3",
+    "polymer-test-tools": "Polymer/polymer-test-tools#~0.3.3"
+  },
+  "_release": "553e3fa027",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "553e3fa027156ad2d0ff9389bbf972f3e1fabe82"
+  },
+  "_source": "git://github.com/philipp94831/github-ribbon.git",
+  "_target": "master",
+  "_originalSource": "philipp94831/github-ribbon",
+  "_direct": true
+}
